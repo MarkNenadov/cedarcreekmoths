@@ -1,0 +1,49 @@
+{
+  "name": "cedarcreekmoths",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "4.11.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.3",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "3.3.0",
+    "typescript": "^3.7.3",
+    "csv-string": "^3.1.7",
+    "is-core-module": "^2.0.0"
+  },
+  "devDependencies": {
+    "@marknenadov/noctuidae-eslint-config": "0.1.10",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.17",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "autoprefixer": "10.1.0",
+    "eslint": "6.6.0",
+    "postcss": "8.2.2",
+    "postcss-cli": "8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "scripts": {
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run watch:css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "eslint": "eslint --fix \"**/*.{tsx,ts}\"",
+    "watch:css": "postcss src/tailwind.css -o src/index.css"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
