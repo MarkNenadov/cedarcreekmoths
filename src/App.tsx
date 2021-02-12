@@ -17,9 +17,9 @@ const App: React.FC = () => {
         <div className='App bg-green-100  border border-black m-5'>
             <div className='flex flex-col m-3 p-2 w-5/8'>
                 <div className='font-bold text-xxl mb-5'>Cedar Creek Moths</div>
-                <div className='flex flex-row justify-between pb-2'>
+                <div className='flex flex-col lg:flex-row justify-between pb-2'>
                     <div>An inventory of moth species found at Cedar Creek Conservation Area in Essex County, Ontario, Canada.</div>
-                    <div className="hidden md:block">
+                    <div>
                         <FontAwesomeIcon icon={ faInfoCircle } /> 
                         <span className='pl-2'>
                             TIP: Click on Family to see Species. Hover over Species to see photo and more details.
