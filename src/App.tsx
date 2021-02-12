@@ -22,7 +22,7 @@ const App: React.FC = () => {
                     <div>
                         <FontAwesomeIcon icon={ faInfoCircle } /> 
                         <span className='pl-2'>
-                            TIP: Click on Family to see Species. Hover over Species to see photo and more details.
+                            TIP: Click on Family to see Species. Select a Species to see photo and more details.
                         </span>
                     </div>
                 </div>
