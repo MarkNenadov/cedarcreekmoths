@@ -31,7 +31,9 @@ export const FamilyListing = ( props: FamilyListingProps ) => {
                 onClick={ () => setExpanded( !expanded ) }
             >
                  <FontAwesomeIcon icon={ faUniversalAccess } />  
-                 Family: { familyName } ({speciesNameMap.size} species)
+                 <span className="pl-1">
+                     Family: { familyName } ( { speciesNameMap.size } species )
+                 </span>
             </span>
             { expanded && (
                 <div>
