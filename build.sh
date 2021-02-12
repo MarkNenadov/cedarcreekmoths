@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NPM_BIN=/usr/bin/npm
-WEBSITE_ROOT=/websites/wondersofnature
+WEBSITE_ROOT=/websites/cedarcreekmoths
 
 $NPM_BIN i;
 $NPM_BIN run build;

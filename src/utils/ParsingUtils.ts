@@ -1,21 +1,20 @@
 // @ts-ignore
-import CSV from 'csv-string';
+import * as CSV from 'csv-string';
 import { MothSighting } from '../model/MothingSighting';
 
-export const parseSpecies = ( csvData: string ) => {
+export const parseSightings = ( csvData: string ) => {
     const result : MothSighting[] = [];
 
-    CSV.parse( csvData ).forEach( ( row: string[] ) => {
-        const species = new MothSighting( row );
-        result.push( species );
-    } );
+    CSV.parse( csvData ).forEach( ( row: string[] ) => result.push( new MothSighting( row ) ) );
 
     return result;
 };
 
-/*if ( row[0] !== 'kingdom' ) {
-    const species = new Species( row );
-    if ( species.name.includes( ' ' ) ) {
-        result.push( species );
-    }
-}*/
+export const parseDateString = ( value : string ) => {
+    return value
+        .replace( "07-", "July " )
+        .replace( "06-", "June " )
+        .replace( "08-", "August " )
+        .replace( "09-", "September " )
+        .replace( "10-", "October " );
+};
