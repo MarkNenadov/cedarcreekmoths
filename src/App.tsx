@@ -28,7 +28,7 @@ const App: React.FC = () => {
                 </div>
                 <div className='flex flex-no-wrap flex-col lg:flex-row lg:flex-wrap bg-white border border-black'>
                     {
-                        Array.from( sightingsByFamilyMap.keys() ).map( ( familyName ) => {
+                        Array.from( sightingsByFamilyMap.keys() ).sort().map( ( familyName ) => {
                             return (
                                 <FamilyListing 
                                     key={ familyName }
