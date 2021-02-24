@@ -1,4 +1,3 @@
-// @ts-ignore
 import * as CSV from 'csv-string';
 import { MothSighting } from '../model/MothingSighting';
 

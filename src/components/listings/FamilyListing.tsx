@@ -29,11 +29,14 @@ export const FamilyListing = ( props: FamilyListingProps ) => {
             <span 
                 className="font-bold cursor-pointer underline"
                 onClick={ () => setExpanded( !expanded ) }
+                onKeyDown={ () => setExpanded( !expanded ) }
+                role="button"
+                tabIndex={ 0 }
             >
-                 <FontAwesomeIcon icon={ faUniversalAccess } />  
-                 <span className="pl-1">
-                     Family: { familyName } ( { speciesNameMap.size } species )
-                 </span>
+                <FontAwesomeIcon icon={ faUniversalAccess } />  
+                <span className="pl-1">
+                    Family: { familyName } ( { speciesNameMap.size } species )
+                </span>
             </span>
             { expanded && (
                 <div>
@@ -42,14 +45,14 @@ export const FamilyListing = ( props: FamilyListingProps ) => {
                             return ( 
                                 <SpeciesRow
                                     key={ scientificName }
-                                    scientificName={scientificName }
-                                    sightings={ speciesNameMap.get( scientificName )}
+                                    scientificName={ scientificName }
+                                    sightings={ speciesNameMap.get( scientificName ) }
                                 />
                             ); 
                         } ) )
                     }
                 </div> 
-            )}
+            ) }
         </div>
     );
 };

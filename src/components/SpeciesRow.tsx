@@ -18,9 +18,9 @@ export const SpeciesRow = ( props: SpeciesRowProps ) => {
         <div className="pb-3 w-full">
             <div
                 className="hover:bg-gray-300 cursor-pointer flex flex-col pl-2"
-                ref={setTriggerRef}
+                ref={ setTriggerRef }
             >
-                 { scientificName } ({ sightings[0].commonName })
+                { scientificName } ({ sightings[0].commonName })
             </div>
 
             <SpeciesRowTooltip 
