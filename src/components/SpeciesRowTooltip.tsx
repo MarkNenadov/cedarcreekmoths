@@ -21,7 +21,7 @@ export const SpeciesRowTooltip = ( props: SpeciesRowTooltipProps ) => {
     }
 
     return (
-        <>
+        <div>
             { 
                 visible && (
                     <div 
@@ -38,7 +38,7 @@ export const SpeciesRowTooltip = ( props: SpeciesRowTooltipProps ) => {
                     </div>
                 )
             }
-        </>
+        </div>
 
     );
 };

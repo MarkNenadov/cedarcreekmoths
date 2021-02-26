@@ -13,18 +13,23 @@ const App: React.FC = () => {
     const sightings = parseSightings( csvData );
     const sightingsByFamilyMap = MothSighting.getSightingsByFamilyMap( sightings );
 
+    const speciesCount = [...new Set( sightings.map( ( sighting ) => sighting.scientificName ) )].length;
+
     return (
         <div className='App bg-green-100  border border-black m-5'>
             <div className='flex flex-col m-3 p-2 w-5/8'>
                 <div className='font-bold text-xxl mb-5'>Cedar Creek Moths</div>
                 <div className='flex flex-col lg:flex-row justify-between pb-2'>
                     <div>An inventory of moth species found at Cedar Creek Conservation Area in Essex County, Ontario, Canada.</div>
-                    <div>
+                    <div className="mt-2 md:mt-0">
                         <FontAwesomeIcon icon={ faInfoCircle } /> 
                         <span className='pl-2'>
                             TIP: Click on Family to see Species. Select a Species to see photo and more details.
                         </span>
                     </div>
+                </div>
+                <div className="pl-1 text-center sm:text-left">
+                    { speciesCount } species across { sightingsByFamilyMap.size } families
                 </div>
                 <div className='flex flex-no-wrap flex-col lg:flex-row lg:flex-wrap bg-white border border-black'>
                     {
