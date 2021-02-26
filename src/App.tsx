@@ -8,12 +8,17 @@ import { RandomMothPhoto } from "./components/RandomMothPhoto";
 import { MothSighting } from './model/MothingSighting';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import 'react-popper-tooltip/dist/styles.css';
+import { usePopperTooltip } from 'react-popper-tooltip';
+import { YearStatsTooltip } from './components/YearStatsTooltip';
 
 const App: React.FC = () => {
     const sightings = parseSightings( csvData );
     const sightingsByFamilyMap = MothSighting.getSightingsByFamilyMap( sightings );
 
     const speciesCount = [...new Set( sightings.map( ( sighting ) => sighting.scientificName ) )].length;
+
+    const { getTooltipProps, setTooltipRef, setTriggerRef, visible } = usePopperTooltip();
 
     return (
         <div className='App bg-green-100  border border-black m-5'>
@@ -29,7 +34,15 @@ const App: React.FC = () => {
                     </div>
                 </div>
                 <div className="pl-1 text-center sm:text-left">
-                    { speciesCount } species across { sightingsByFamilyMap.size } families
+                    <span className="hover:bg-gray-300 cursor-pointer" ref={ setTriggerRef }><span className="underline font-bold">{ speciesCount }</span> </span>
+                    species across { sightingsByFamilyMap.size } families
+
+                    <YearStatsTooltip 
+                        getTooltipProps={ getTooltipProps }
+                        setTooltipRef={ setTooltipRef }
+                        visible={ visible }
+                        sightings={ sightings }
+                    />
                 </div>
                 <div className='flex flex-no-wrap flex-col lg:flex-row lg:flex-wrap bg-white border border-black'>
                     {
