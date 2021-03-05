@@ -24,16 +24,16 @@ const App: React.FC = () => {
         <div className='App bg-green-100  border border-black m-5 rounded-lg'>
             <div className='flex flex-col m-3 p-2 w-5/8'>
                 <div className='font-bold text-xxl mb-5'>Cedar Creek Moths</div>
-                <div className='flex flex-col lg:flex-row justify-between pb-2'>
+                <div className='flex flex-col lg:flex-row justify-between pb-2 pl-2'>
                     <div>An inventory of moth species found at Cedar Creek Conservation Area in Essex County, Ontario, Canada.</div>
                     <div className="mt-2 md:mt-0">
                         <FontAwesomeIcon icon={ faInfoCircle } /> 
-                        <span className='pl-2'>
+                        <span className='pl-2 pr-2'>
                             TIP: Click on Family to see Species. Select a Species to see photo and more details.
                         </span>
                     </div>
                 </div>
-                <div className="pl-1 text-center sm:text-left">
+                <div className="pl-2 text-center sm:text-left pb-1">
                     <span className="hover:bg-gray-300 cursor-pointer" ref={ setTriggerRef }><span className="underline font-bold">{ speciesCount }</span> </span>
                     species across { sightingsByFamilyMap.size } families
 
