@@ -21,7 +21,7 @@ const App: React.FC = () => {
     const { getTooltipProps, setTooltipRef, setTriggerRef, visible } = usePopperTooltip();
 
     return (
-        <div className='App bg-green-100  border border-black m-5'>
+        <div className='App bg-green-100  border border-black m-5 rounded-lg'>
             <div className='flex flex-col m-3 p-2 w-5/8'>
                 <div className='font-bold text-xxl mb-5'>Cedar Creek Moths</div>
                 <div className='flex flex-col lg:flex-row justify-between pb-2'>
@@ -44,7 +44,7 @@ const App: React.FC = () => {
                         sightings={ sightings }
                     />
                 </div>
-                <div className='flex flex-no-wrap flex-col lg:flex-row lg:flex-wrap bg-white border border-black'>
+                <div className='flex flex-no-wrap flex-col lg:flex-row lg:flex-wrap bg-white border border-black rounded-lg'>
                     {
                         Array.from( sightingsByFamilyMap.keys() ).sort().map( ( familyName ) => {
                             return (

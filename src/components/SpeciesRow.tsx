@@ -15,7 +15,7 @@ export const SpeciesRow = ( props: SpeciesRowProps ) => {
     const { getTooltipProps, setTooltipRef, setTriggerRef, visible } = usePopperTooltip();
       
     return (
-        <div className="pb-3 w-full">
+        <div className="pb-1 w-full pt-1">
             <div
                 className="hover:bg-gray-300 cursor-pointer flex flex-col pl-2"
                 ref={ setTriggerRef }

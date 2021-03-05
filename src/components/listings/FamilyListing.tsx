@@ -39,7 +39,7 @@ export const FamilyListing = ( props: FamilyListingProps ) => {
                 </span>
             </span>
             { expanded && (
-                <div>
+                <div className='pt-2'>
                     {
                         ( Array.from( speciesNameMap.keys() ).sort().map( ( scientificName ) => {
                             return ( 
