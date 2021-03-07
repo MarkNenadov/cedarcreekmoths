@@ -11,6 +11,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import 'react-popper-tooltip/dist/styles.css';
 import { usePopperTooltip } from 'react-popper-tooltip';
 import { YearStatsTooltip } from './components/YearStatsTooltip';
+import { config } from './config';
 
 const App: React.FC = () => {
     const sightings = parseSightings( csvData );
@@ -21,11 +22,17 @@ const App: React.FC = () => {
     const { getTooltipProps, setTooltipRef, setTriggerRef, visible } = usePopperTooltip();
 
     return (
-        <div className='App bg-green-100  border border-black m-5 rounded-lg'>
+        <div className='App bg-green-100 border border-black m-5 rounded-lg'>
             <div className='flex flex-col m-3 p-2 w-5/8'>
-                <div className='font-bold text-xxl mb-5'>Cedar Creek Moths</div>
+                <div className='font-bold text-xxl mb-5'>
+                    { config.siteName }
+                </div>
                 <div className='flex flex-col lg:flex-row justify-between pb-2 pl-2'>
-                    <div>An inventory of moth species found at Cedar Creek Conservation Area in Essex County, Ontario, Canada.</div>
+                    <div>
+                        An inventory of moth species found at
+                        { config.locationName }
+                        in Essex County, Ontario, Canada.
+                    </div>
                     <div className="mt-2 md:mt-0">
                         <FontAwesomeIcon icon={ faInfoCircle } /> 
                         <span className='pl-2 pr-2'>
