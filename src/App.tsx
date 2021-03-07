@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { csvData } from './data/CedarCreekMothData';
+import { csvData } from './data/dataPicker';
 import { parseSightings } from './utils/ParsingUtils';
 import { FamilyListing } from './components/listings/FamilyListing';
 import { AppFooter } from "./components/AppFooter";

@@ -1,4 +1,4 @@
-export const csvData = `50509154,2020-06-21,https://www.inaturalist.org/observations/50509154,https://static.inaturalist.org/photos/80211640/medium.jpg?1592799839,Panopoda carneicosta,Brown Panopoda Moth,Insecta,Noctuoidea,Erebidae,Eulepidotinae
+export const cedarCreekCsvData = `50509154,2020-06-21,https://www.inaturalist.org/observations/50509154,https://static.inaturalist.org/photos/80211640/medium.jpg?1592799839,Panopoda carneicosta,Brown Panopoda Moth,Insecta,Noctuoidea,Erebidae,Eulepidotinae
 50515741,2020-06-21,https://www.inaturalist.org/observations/50515741,https://static.inaturalist.org/photos/80211663/medium.jpg?1592799848,Antheraea polyphemus,Polyphemus Moth,Insecta,Bombycoidea,Saturniidae,Saturniinae
 50515909,2020-06-21,https://www.inaturalist.org/observations/50515909,https://static.inaturalist.org/photos/80211973/medium.jpg?1592799976,Leuconycta diphteroides,Green Leuconycta Moth,Insecta,Noctuoidea,Noctuidae,Condicinae
 50516033,2020-06-21,https://www.inaturalist.org/observations/50516033,https://static.inaturalist.org/photos/80212251/medium.jpg?1592800084,Hypercompe scribonia,Giant Leopard Moth,Insecta,Noctuoidea,Erebidae,Arctiinae
