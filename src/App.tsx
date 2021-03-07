@@ -30,7 +30,9 @@ const App: React.FC = () => {
                 <div className='flex flex-col lg:flex-row justify-between pb-2 pl-2'>
                     <div>
                         An inventory of moth species found at
+                        &nbsp;
                         { config.locationName }
+                        &nbsp;
                         in Essex County, Ontario, Canada.
                     </div>
                     <div className="mt-2 md:mt-0">
