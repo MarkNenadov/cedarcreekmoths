@@ -1,5 +1,4 @@
 export const maidstoneCsvData = `4427072,2016-10-22,http://inaturalist.ca/observations/4427072,https://inaturalist-open-data.s3.amazonaws.com/photos/5325625/medium.jpeg?1477328007,Ctenucha virginica,Virginia Ctenucha Moth,Insecta,Noctuoidea,Erebidae,Arctiinae
-6598101,2017-06-11,http://inaturalist.ca/observations/6598101,https://inaturalist-open-data.s3.amazonaws.com/photos/8376500/medium.jpg?1497225895,Papilio cresphontes,Eastern Giant Swallowtail,Insecta,Papilionoidea,Papilionidae,Papilioninae
 52300727,2020-07-06,https://www.inaturalist.org/observations/52300727,https://inaturalist-open-data.s3.amazonaws.com/photos/83131216/medium.jpg?1594155489,Macaria pustularia,Lesser Maple Spanworm Moth,Insecta,Geometroidea,Geometridae,Ennominae
 54703641,2020-07-28,https://www.inaturalist.org/observations/54703641,https://inaturalist-open-data.s3.amazonaws.com/photos/87059202/medium.jpg?1595994579,Apantesis phalerata,Harnessed Tiger Moth,Insecta,Noctuoidea,Erebidae,Arctiinae
 54704651,2020-07-28,https://www.inaturalist.org/observations/54704651,https://inaturalist-open-data.s3.amazonaws.com/photos/87061058/medium.jpg?1595995807,Amphipyra pyramidoides,Copper Underwing,Insecta,Noctuoidea,Noctuidae,Amphipyrinae
@@ -145,5 +144,4 @@ export const maidstoneCsvData = `4427072,2016-10-22,http://inaturalist.ca/observ
 60810451,2020-09-25,https://www.inaturalist.org/observations/60810451,https://inaturalist-open-data.s3.amazonaws.com/photos/97260472/medium.jpg?1601120629,Peridroma saucia,Variegated Cutworm Moth,Insecta,Noctuoidea,Noctuidae,Noctuinae
 60810452,2020-09-25,https://www.inaturalist.org/observations/60810452,https://inaturalist-open-data.s3.amazonaws.com/photos/97260532/medium.jpg?1601120663,Peridroma saucia,Variegated Cutworm Moth,Insecta,Noctuoidea,Noctuidae,Noctuinae
 61902972,2020-08-02,https://www.inaturalist.org/observations/61902972,https://inaturalist-open-data.s3.amazonaws.com/photos/99090158/medium.jpg?1602014605,Pleuroprucha insulsaria,Common Tan Wave,Insecta,Geometroidea,Geometridae,Sterrhinae
-62891503,2020-10-17,https://www.inaturalist.org/observations/62891503,https://inaturalist-open-data.s3.amazonaws.com/photos/100846673/medium.jpg?1603027526,Autographa precationis,Common Looper Moth,Insecta,Noctuoidea,Noctuidae,Plusiinae
-`;
+62891503,2020-10-17,https://www.inaturalist.org/observations/62891503,https://inaturalist-open-data.s3.amazonaws.com/photos/100846673/medium.jpg?1603027526,Autographa precationis,Common Looper Moth,Insecta,Noctuoidea,Noctuidae,Plusiinae`;
