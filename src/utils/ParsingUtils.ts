@@ -11,8 +11,11 @@ export const parseSightings = ( csvData: string ) => {
 
 export const parseDateString = ( value : string ) => {
     return value
-        .replace( "07-", "July " )
+        .replace( "03-", "March " )
+        .replace( "04-", "April " )
+        .replace( "05-", "May " )
         .replace( "06-", "June " )
+        .replace( "07-", "July " )
         .replace( "08-", "August " )
         .replace( "09-", "September " )
         .replace( "10-", "October " );

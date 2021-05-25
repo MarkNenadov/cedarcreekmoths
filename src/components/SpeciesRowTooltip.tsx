@@ -30,7 +30,17 @@ export const SpeciesRowTooltip = ( props: SpeciesRowTooltipProps ) => {
                     >
                         <div 
                         >
-                            <div className="font-bold text-lg">{ commonName } ({ scientificName }) </div>
+                            <div className="font-bold text-lg">
+                                { scientificName }
+                                {
+                                    !!sightings[0].commonName && (
+                                        <>
+                                            &nbsp;
+                                            ({ sightings[0].commonName })
+                                        </>
+                                    )
+                                }
+                            </div>
                             <div>{ sightings.length } sighting{ sightings.length > 1 ? "s" : "" }</div>
                             <div>Known Flight Season: { knownFlightSeasonValue }</div> 
                             { !!randomSighting.photoUrl && <img alt={ `inaturalist: ${commonName}` } src={ randomSighting.photoUrl } /> }
