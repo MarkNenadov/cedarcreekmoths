@@ -15,7 +15,7 @@ export const AppFooter = () => {
                 <FontAwesomeIcon icon={ faThumbsUp } /> 
                 <span className='pl-1'>
                     Special thanks to a number of people who&apos;ve mothed with me at Cedar Creek Conservation Area, including:
-                    Moe B., Dwayne M., Kit M., David B., Michael K., Jeremy B., Josh V., Baz C., Steve P., Xander C., and others.
+                    Moe B., Dwayne M., Kit M., David B., Michael K., Jeremy B., Josh V., Baz C., Steve P., Xander C., Mel D., Derek S., and others.
                 </span>
             </div>
         </div>
