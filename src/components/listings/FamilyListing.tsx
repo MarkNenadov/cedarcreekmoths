@@ -33,6 +33,8 @@ export const FamilyListing = ( props: FamilyListingProps ) => {
                 role="button"
                 tabIndex={ 0 }
             >
+                { /*
+                // @ts-ignore */ }
                 <FontAwesomeIcon icon={ faUniversalAccess } />  
                 <span className="pl-1">
                     Family: { familyName } ( { speciesNameMap.size } species )

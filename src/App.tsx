@@ -36,6 +36,8 @@ const App: React.FC = () => {
                         in Essex County, Ontario, Canada.
                     </div>
                     <div className="mt-2 md:mt-0">
+                        { /*
+                        // @ts-ignore */ }
                         <FontAwesomeIcon icon={ faInfoCircle } /> 
                         <span className='pl-2 pr-2'>
                             TIP: Click on Family to see Species. Select a Species to see photo and more details.
