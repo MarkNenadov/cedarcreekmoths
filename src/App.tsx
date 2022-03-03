@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import { csvData } from './data/dataPicker';
 import { parseSightings } from './utils/ParsingUtils';
 import { FamilyListing } from './components/listings/FamilyListing';
 import { AppFooter } from "./components/AppFooter";
@@ -14,7 +13,7 @@ import { YearStatsTooltip } from './components/YearStatsTooltip';
 import { config } from './config';
 
 const App: React.FC = () => {
-    const sightings = parseSightings( csvData );
+    const sightings = parseSightings( config.csvData );
     const sightingsByFamilyMap = MothSighting.getSightingsByFamilyMap( sightings );
 
     const speciesCount = [...new Set( sightings.map( ( sighting ) => sighting.scientificName ) )].length;
