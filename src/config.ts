@@ -1,5 +1,6 @@
 import { cedarCreekCsvData } from './data/CedarCreekMothData';
 import { maidstoneCsvData } from './data/MaidstoneCAMothData';
+import { ojibwayCsvData } from './data/OjibwayMothData';
 
 const cedarCreekConfig = {
     siteName: "Cedar Creek Moths",
@@ -22,7 +23,7 @@ const maidstoneConfig = {
 const ojibwayConfig = {
     siteName: "Ojibway Prairie Complex Moths",
     locationName: "Ojibway Prairie Complex",
-    csvData: maidstoneCsvData,
+    csvData: ojibwayCsvData,
     urls: {
         gitHubProject: 'https://github.com/MarkNenadov/cedarcreekmoths/',
     },
@@ -30,7 +31,7 @@ const ojibwayConfig = {
 
 const configMapping = new Map<string, any>();
 configMapping.set( 'http://localhost:3000/', cedarCreekConfig );
-configMapping.set( 'http://127.0.0.1:3000/', ojibwayConfig );
+configMapping.set( 'http://ojibwaymoths.marknenadov.com/', ojibwayConfig );
 configMapping.set( 'http://cedarcreekmonths.marknenadov.com/', cedarCreekConfig );
 
 export const config = configMapping.get( window.location.href );
