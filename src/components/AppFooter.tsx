@@ -10,7 +10,7 @@ export const AppFooter = () => {
                 // @ts-ignore */ }
                 <FontAwesomeIcon icon={ faCopyright } /> 
                 <span className='pl-1'>
-                    Mark Nenadov 2021. <a className='underline' href='mailto:marknenadov@gmail.com'>marknenadov@gmail.com</a>
+                    Mark Nenadov 2022. <a className='underline' href='mailto:marknenadov@gmail.com'>marknenadov@gmail.com</a>
                 </span>
             </div>
             <div className='mt-2 lg:mt-0'>
