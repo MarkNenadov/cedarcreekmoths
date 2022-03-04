@@ -30,6 +30,7 @@ const ojibwayConfig = {
 };
 
 const configMapping = new Map<string, any>();
+configMapping.set( 'http://127.0.0.1:3000/', ojibwayConfig );
 configMapping.set( 'http://localhost:3000/', cedarCreekConfig );
 configMapping.set( 'http://ojibwaymoths.marknenadov.com/', ojibwayConfig );
 configMapping.set( 'http://cedarcreekmoths.marknenadov.com/', cedarCreekConfig );
