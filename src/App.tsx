@@ -13,6 +13,7 @@ import { YearStatsTooltip } from './components/YearStatsTooltip';
 import { config } from './config';
 
 const App: React.FC = () => {
+    document.title = config.siteName;
     const sightings = parseSightings( config.csvData );
     const sightingsByFamilyMap = MothSighting.getSightingsByFamilyMap( sightings );
 
