@@ -36,5 +36,3 @@ configMapping.set( 'http://ojibwaymoths.marknenadov.com/', ojibwayConfig );
 configMapping.set( 'http://cedarcreekmoths.marknenadov.com/', cedarCreekConfig );
 
 export const config = configMapping.get( window.location.href );
-console.log( window.location.href );
-console.log( config );
