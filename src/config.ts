@@ -32,7 +32,7 @@ const ojibwayConfig = {
 const configMapping = new Map<string, any>();
 configMapping.set( 'http://localhost:3000/', cedarCreekConfig );
 configMapping.set( 'http://ojibwaymoths.marknenadov.com/', ojibwayConfig );
-configMapping.set( 'http://cedarcreekmonths.marknenadov.com/', cedarCreekConfig );
+configMapping.set( 'http://cedarcreekmoths.marknenadov.com/', cedarCreekConfig );
 
 export const config = configMapping.get( window.location.href );
 console.log( window.location.href );
