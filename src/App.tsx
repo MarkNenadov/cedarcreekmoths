@@ -15,7 +15,9 @@ import { config, selectConfigById, getSiteOptions } from './config';
 
 const App: React.FC = () => {
     const [currentConfig, setCurrentConfig] = useState( config );
+
     document.title = currentConfig.siteName;
+
     const sightings = parseSightings( currentConfig.csvData );
     const sightingsByFamilyMap = MothSighting.getSightingsByFamilyMap( sightings );
 
@@ -42,7 +44,7 @@ const App: React.FC = () => {
                             if ( matchingConfig ) {
                                 setCurrentConfig( matchingConfig );
                             }
-                        }}
+                        } }
                     />
                 </div>
                 <div className='flex flex-col lg:flex-row justify-between pb-2 pl-2'>

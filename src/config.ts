@@ -1,6 +1,7 @@
 import { cedarCreekCsvData } from './data/CedarCreekMothData';
 import { maidstoneCsvData } from './data/MaidstoneCAMothData';
 import { ojibwayCsvData } from './data/OjibwayMothData';
+import { essexCountyCsvData } from './data/EssexCountyMothData';
 
 const cedarCreekConfig = {
     id: "cedarcreek",
@@ -32,12 +33,22 @@ const ojibwayConfig = {
     },
 };
 
-const configs = [ojibwayConfig, cedarCreekConfig, maidstoneConfig];
+const essexCountyConfig = {
+    id: "essexcounty",
+    siteName: "Essex County Moths",
+    locationName: "Essex County",
+    csvData: essexCountyCsvData,
+    urls: {
+        gitHubProject: 'https://github.com/MarkNenadov/cedarcreekmoths/',
+    },
+};
+
+const configs = [essexCountyConfig, ojibwayConfig, cedarCreekConfig, maidstoneConfig];
 
 const configUrlMapping = new Map<string, any>();
 
 configUrlMapping.set( 'http://127.0.0.1:3000/', ojibwayConfig );
-configUrlMapping.set( 'http://localhost:3000/', cedarCreekConfig );
+configUrlMapping.set( 'http://localhost:3000/', essexCountyConfig );
 configUrlMapping.set( 'http://ojibwaymoths.marknenadov.com/', ojibwayConfig );
 configUrlMapping.set( 'http://cedarcreekmoths.marknenadov.com/', cedarCreekConfig );
 
