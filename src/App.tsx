@@ -51,7 +51,7 @@ const App: React.FC = () => {
                     <div>
                         An inventory of moth species found at
                         &nbsp;
-                        { config.locationName }
+                        { currentConfig.locationName }
                         &nbsp;
                         in Essex County, Ontario, Canada.
                     </div>
