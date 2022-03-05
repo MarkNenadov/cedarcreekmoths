@@ -11,7 +11,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import 'react-popper-tooltip/dist/styles.css';
 import { usePopperTooltip } from 'react-popper-tooltip';
 import { YearStatsTooltip } from './components/YearStatsTooltip';
-import { config, ojibwayConfig, cedarCreekConfig, maidstoneConfig } from './config';
+import { config, selectConfigById, getSiteOptions } from './config';
 
 const App: React.FC = () => {
     const [currentConfig, setCurrentConfig] = useState( config );
@@ -23,13 +23,7 @@ const App: React.FC = () => {
 
     const { getTooltipProps, setTooltipRef, setTriggerRef, visible } = usePopperTooltip();
 
-    console.log( currentConfig.id );
-
-    const options = [
-        { value: "cedarcreek", label: "Cedar Creek Moths" },
-        { value: "ojibway", label: "Ojibway Prairie Complex Moths" },
-        { value: "maidstone", label: "Maidstone Conservation Area Moths" },
-    ];
+    const siteOptions = getSiteOptions();
 
     return (
         <div className='App bg-green-100 border border-black m-5 rounded-lg'>
@@ -38,17 +32,15 @@ const App: React.FC = () => {
                     <Select
                         className={ "basic-single" }
                         classNamePrefix={ "select" }
-                        defaultValue={ options[0]}
-                        options={ options }
-                        value={ options.filter( ( option ) => option!.value === currentConfig.id ) }
+                        defaultValue={ siteOptions[0] }
+                        options={ siteOptions }
+                        value={ siteOptions.filter( ( option ) => option!.value === currentConfig.id ) }
                         isSearchable={ currentConfig.siteName }
                         onChange={ ( selectedOption ) => {
-                            if ( selectedOption!.value === "ojibway" ) {
-                                setCurrentConfig( ojibwayConfig );
-                            } else if ( selectedOption!.value === "cedarcreek" ) {
-                                setCurrentConfig( cedarCreekConfig );
-                            } else if ( selectedOption!.value === "maidstone" ) {
-                                setCurrentConfig( maidstoneConfig );
+                            const matchingConfig = selectConfigById( selectedOption!.value );
+
+                            if ( matchingConfig ) {
+                                setCurrentConfig( matchingConfig );
                             }
                         }}
                     />
