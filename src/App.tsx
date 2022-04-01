@@ -4,7 +4,7 @@ import './App.css';
 import { parseSightings } from './utils/ParsingUtils';
 import { FamilyListing } from './components/listings/FamilyListing';
 import { AppFooter } from "./components/AppFooter";
-import { RandomMothPhoto } from "./components/RandomMothPhoto";
+import { RandomMothPhotos } from "./components/RandomMothPhoto";
 import { MothSighting } from './model/MothingSighting';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
@@ -76,6 +76,7 @@ const App: React.FC = () => {
                     />
                 </div>
                 <div className='flex flex-no-wrap flex-col lg:flex-row lg:flex-wrap bg-white border border-black rounded-lg'>
+                    <div className='w-3/4'>
                     {
                         Array.from( sightingsByFamilyMap.keys() ).sort().map( ( familyName ) => {
                             return (
@@ -87,8 +88,14 @@ const App: React.FC = () => {
                             );
                         } ) 
                     }
-                    <RandomMothPhoto 
-                        sighting={ sightings[Math.floor( Math.random() * sightings.length )] }
+                    </div>
+                    <RandomMothPhotos 
+                        sightings={ [
+                            sightings[Math.floor( Math.random() * sightings.length )],
+                            sightings[Math.floor( Math.random() * sightings.length )],
+                            sightings[Math.floor( Math.random() * sightings.length )],
+                            sightings[Math.floor( Math.random() * sightings.length )],
+                        ] }
                     />
                 </div>
 
